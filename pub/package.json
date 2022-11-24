@@ -1,0 +1,27 @@
+{
+  "author": "Corno",
+  "dependencies": {
+    "pareto-core-internals": "^0.9.0"
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "keywords": [],
+  "main": "./dist/index.js",
+  "bugs": {
+    "url": "https://github.com/corno/res-typescript/issues"
+  },
+  "description": "",
+  "homepage": "https://github.com/corno/res-typescript#readme",
+  "license": "ISC",
+  "name": "res-typescript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corno/res-typescript.git"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.1.0",
+  "interface-fingerprint": "56f613a4c4059d3685eeca4cbe570d85e541b3a6",
+  "content-fingerprint": "b36c7c729d12bf8e7f5015cc3a69d68c2315076f"
+}
