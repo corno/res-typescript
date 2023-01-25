@@ -1,7 +1,7 @@
 import * as pi from 'pareto-core-internals'
 import * as api from "../api"
 
-export const $$: api.CescapeTypescriptIdentifier = ($) => {
+export const $$: api.CcreateIdentifier = ($) => {
     if ($ === "") {
         return "_empty"
     }

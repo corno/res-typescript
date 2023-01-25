@@ -38,13 +38,16 @@ export const $$: api.CgetTestSet = () => {
     }
 
     function id(raw: string, formatted: string) {
-        createTest(raw, formatted, pub.$a.escapeTypescriptIdentifier(raw))
+        createTest(raw, formatted, pub.$a.createIdentifier(raw))
     }
     function qu(raw: string, formatted: string) {
         createTest(raw, formatted, pub.$a.createQuotedString(raw))
     }
     function ap(raw: string, formatted: string) {
         createTest(raw, formatted, pub.$a.createApostrophedString(raw))
+    }
+    function bt(raw: string, formatted: string) {
+        createTest(raw, formatted, pub.$a.createBacktickedString(raw))
     }
     id("", "_empty")
     id("abc", "abc")
@@ -64,6 +67,9 @@ export const $$: api.CgetTestSet = () => {
 
     ap("foo2", "'foo2'")
     ap("foo2 ' bar", "'foo2 \\' bar'")
+
+    bt("foo3", "`foo3`")
+    bt("foo3 ` bar", "`foo3 \\` bar`")
 
     return pl.asyncValue({
         elements: builder.getDictionary()

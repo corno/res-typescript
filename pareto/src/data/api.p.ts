@@ -41,7 +41,10 @@ export const $: mmoduleDefinition.TModuleDefinition = {
 
         },
         'functions': d({ 
-            "EscapeIdentifier": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
+            "CreateIdentifier": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
+            "CreateQuotedString": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
+            "CreateApostrophedString": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
+            "CreateBacktickedString": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
             }),
     },
     'api': {
@@ -49,16 +52,20 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             //"common": "glo-pareto-common",
         }),
         'algorithms': d({
-            "escapeTypescriptIdentifier": {
-                'definition': definitionReference("EscapeIdentifier"),
+            "createIdentifier": {
+                'definition': definitionReference("CreateIdentifier"),
                 'type': ['reference', null],
             },
             "createQuotedString": {
-                'definition': definitionReference("EscapeIdentifier"),
+                'definition': definitionReference("CreateQuotedString"),
                 'type': ['reference', null],
             },
             "createApostrophedString": {
-                'definition': definitionReference("EscapeIdentifier"),
+                'definition': definitionReference("CreateBacktickedString"),
+                'type': ['reference', null],
+            },
+            "createBacktickedString": {
+                'definition': definitionReference("CreateApostrophedString"),
                 'type': ['reference', null],
             },
         })
