@@ -41,7 +41,7 @@ export const $: mmoduleDefinition.TModuleDefinition = {
 
         },
         'functions': d({ 
-            "EscapeTypescriptIdentifier": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
+            "EscapeIdentifier": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
             }),
     },
     'api': {
@@ -50,9 +50,17 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         }),
         'algorithms': d({
             "escapeTypescriptIdentifier": {
-                'definition': definitionReference("EscapeTypescriptIdentifier"),
+                'definition': definitionReference("EscapeIdentifier"),
                 'type': ['reference', null],
-            }
+            },
+            "createQuotedString": {
+                'definition': definitionReference("EscapeIdentifier"),
+                'type': ['reference', null],
+            },
+            "createApostrophedString": {
+                'definition': definitionReference("EscapeIdentifier"),
+                'type': ['reference', null],
+            },
         })
     },
 }

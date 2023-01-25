@@ -37,21 +37,34 @@ export const $$: api.CgetTestSet = () => {
         })
     }
 
-    function x(raw: string, formatted: string) {
+    function id(raw: string, formatted: string) {
         createTest(raw, formatted, pub.$a.escapeTypescriptIdentifier(raw))
     }
-    x("", "_empty")
-    x("abc", "abc")
-    x("while", "_lwhile")
-    x("for", "_lfor")
-    x("1mississippi", "_1mississippi")
-    x("a1", "a1")
-    x(" ", "__")
-    x("_", "_$")
-    x("a b", "a__b")
-    x("a_b", "a_$b")
-    x("a:b", "a_clb")
-    x(":b", "_clb")
+    function qu(raw: string, formatted: string) {
+        createTest(raw, formatted, pub.$a.createQuotedString(raw))
+    }
+    function ap(raw: string, formatted: string) {
+        createTest(raw, formatted, pub.$a.createApostrophedString(raw))
+    }
+    id("", "_empty")
+    id("abc", "abc")
+    id("while", "_lwhile")
+    id("for", "_lfor")
+    id("1mississippi", "_1mississippi")
+    id("a1", "a1")
+    id(" ", "__")
+    id("_", "_$")
+    id("a b", "a__b")
+    id("a_b", "a_$b")
+    id("a:b", "a_clb")
+    id(":b", "_clb")
+    
+    qu("foo", '"foo"')
+    qu("foo \" bar", '"foo \\" bar"')
+
+    ap("foo2", "'foo2'")
+    ap("foo2 ' bar", "'foo2 \\' bar'")
+
     return pl.asyncValue({
         elements: builder.getDictionary()
     })
