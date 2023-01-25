@@ -1,3 +1,2 @@
-
-export * from "./implementation"
-export * from "./interface"
+export { $a } from "./modules/main"
+export * from "./modules/main/api"
