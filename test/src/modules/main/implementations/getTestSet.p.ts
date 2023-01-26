@@ -49,6 +49,7 @@ export const $$: api.CgetTestSet = () => {
     function bt(raw: string, formatted: string) {
         createTest(raw, formatted, pub.$a.createBacktickedString(raw))
     }
+    id("$", "$")
     id("", "_empty")
     id("abc", "abc")
     id("while", "_lwhile")

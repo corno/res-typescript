@@ -85,7 +85,7 @@ export const $$: api.CcreateIdentifier = ($) => {
         const charCode = $.charCodeAt(i)
         const char = $.charAt(i)
         if (false
-            || charCode === 122 //$
+            || charCode === 36 //$
             || charCode >= 48 && charCode <= 57 //0-9
             || charCode >= 65 && charCode <= 90 //A-Z
             || charCode >= 97 && charCode <= 122//a-z
