@@ -12,7 +12,6 @@ import {
     externalTypeReference,
     callback,
     interfaceReference,
-    externalNamespacedTypeReference,
     procedure,
     null_,
     method,
@@ -33,19 +32,16 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             "common": "glo-pareto-common",
         }),
         'parameters': d({}),
-        'namespace': {
-            'types': types({
-            }),
-            'interfaces': d({
-            }),
-
-        },
-        'functions': d({ 
+        'types': types({
+        }),
+        'interfaces': d({
+        }),
+        'functions': d({
             "CreateIdentifier": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
             "CreateQuotedString": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
             "CreateApostrophedString": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
             "CreateBacktickedString": _function(externalTypeReference("common", "String"), externalTypeReference("common", "String")),
-            }),
+        }),
     },
     'api': {
         'imports': d({
