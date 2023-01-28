@@ -22,6 +22,6 @@
     "url": "git+https://github.com/corno/res-typescript.git"
   },
   "types": "dist/index.d.ts",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "content-fingerprint": "26c75bf0dbe253ea42601033bb4bce8d92ce17d3"
 }
