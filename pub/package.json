@@ -1,27 +1,21 @@
 {
+  "name": "res-typescript",
   "author": "Corno",
+  "license": "ISC",
+  "description": "provides functionality to support javascript code generation. helps create valid identifiers, quoted strings etcetera",
   "dependencies": {
-    "glo-pareto-common": "^0.9.0",
+    "glo-pareto-common": "^0.10.0",
     "pareto-core-internals": "^0.11.0"
   },
   "files": [
-    "dist",
-    "data"
+    "dist"
   ],
-  "keywords": [],
-  "main": "./dist/index.js",
-  "bugs": {
-    "url": "https://github.com/corno/res-typescript/issues"
-  },
-  "description": "",
-  "homepage": "https://github.com/corno/res-typescript#readme",
-  "license": "ISC",
-  "name": "res-typescript",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/corno/res-typescript.git"
+    "url": "http://github.com/corno/res-typescript.git"
   },
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "0.7.0",
-  "content-fingerprint": "26c75bf0dbe253ea42601033bb4bce8d92ce17d3"
+  "version": "0.0.0",
+  "content-fingerprint": "b106cfdd54a00e7589611fa3954f57eee5286641"
 }
