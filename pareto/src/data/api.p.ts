@@ -3,16 +3,14 @@ import {
     nested,
     array,
     typeReference,
-    callback,
     interfaceReference,
-    procedure,
     null_,
-    method, dictionary, group, member, taggedUnion, types, _function
-} from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
+    method, dictionary, group, member, taggedUnion, types, func, data,
+} from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
-import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
+import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
 
-import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/modules/moduleDefinition"
+import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/submodules/moduleDefinition"
 
 const d = pr.wrapRawDictionary
 
@@ -28,10 +26,10 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         'interfaces': d({
         }),
         'functions': d({
-            "CreateIdentifier": _function(typeReference("common", "String"), typeReference("common", "String")),
-            "CreateQuotedString": _function(typeReference("common", "String"), typeReference("common", "String")),
-            "CreateApostrophedString": _function(typeReference("common", "String"), typeReference("common", "String")),
-            "CreateBacktickedString": _function(typeReference("common", "String"), typeReference("common", "String")),
+            "CreateIdentifier": func(typeReference("common", "String"), null, null, data( typeReference("common", "String"), false)),
+            "CreateQuotedString": func(typeReference("common", "String"), null, null, data(  typeReference("common", "String"), false)),
+            "CreateApostrophedString": func(typeReference("common", "String"),  null, null, data( typeReference("common", "String"), false)),
+            "CreateBacktickedString": func(typeReference("common", "String"),  null, null, data( typeReference("common", "String"), false)),
         }),
     },
     'api': {
