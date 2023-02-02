@@ -2,7 +2,6 @@
   "author": "Corno",
   "license": "ISC",
   "description": "provides functionality to support javascript code generation. helps create valid identifiers, quoted strings etcetera",
-
   "dependencies": {
     "glo-pareto-common": "^0.11.0",
     "pareto-core-internals": "^0.11.0"
@@ -11,8 +10,12 @@
     "dist"
   ],
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "http://github.com/corno/res-typescript.git"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "name": "res-typescript",
+  "version": "0.9.0",
+  "content-fingerprint": "0f928a1128392febc1985fcae01a23cf7ec4c6ab"
 }
