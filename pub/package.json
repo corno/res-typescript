@@ -4,8 +4,8 @@
   "description": "provides functionality to support javascript code generation. helps create valid identifiers, quoted strings etcetera",
 
   "dependencies": {
-    "glo-pareto-common": "^0.0.0",
-    "pareto-core-internals": "^0.0.0"
+    "glo-pareto-common": "^0.12.0",
+    "pareto-core-internals": "^0.11.1"
   },
   "files": [
     "dist"
