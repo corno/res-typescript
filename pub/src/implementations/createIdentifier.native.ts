@@ -70,7 +70,8 @@ export const $$: api.CcreateIdentifier = ($) => {
         "from",
         "of",
         //???
-        "unknown"
+        "unknown",
+        "object",
     ]
     if (reservedKeywords.indexOf($) > -1) {
         return `_l${$}`
