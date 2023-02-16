@@ -11,16 +11,24 @@ export const $: mproject.T.Project = {
     'description': "provides functionality to support javascript code generation. helps create valid identifiers, quoted strings etcetera",
     'license': "ISC",
     
-    'pubdependencies': d({
+    'dependencies': d({
         "glo-pareto-common": {},
     }),
     'type': ['resource', {
         'definition': api,
+        'nativeDependencies': d({}),
         'devDependencies': d({
         }),
         'test': {
             'dependencies': d({
             }),
+            'glossary': {
+                'functions': d({}),
+                'imports': d({}),
+                'parameters': d({}),
+                'types': d({}),
+                'interfaces': d({}),
+            },
         }
     }],
 }
