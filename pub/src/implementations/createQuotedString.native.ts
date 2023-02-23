@@ -1,6 +1,5 @@
-import * as pi from 'pareto-core-internals'
-import * as api from "../api"
+import * as mapi from "../api"
 
-export const $$: api.CcreateQuotedString = ($) => {
+export const $$: mapi.CcreateQuotedString = ($) => {
     return JSON.stringify($)
 }

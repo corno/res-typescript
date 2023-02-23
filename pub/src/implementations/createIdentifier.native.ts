@@ -1,7 +1,8 @@
 import * as pi from 'pareto-core-internals'
-import * as api from "../api"
 
-export const $$: api.CcreateIdentifier = ($) => {
+import * as mapi from "../api"
+
+export const $$: mapi.CcreateIdentifier = ($) => {
     if ($ === "") {
         return "_empty"
     }

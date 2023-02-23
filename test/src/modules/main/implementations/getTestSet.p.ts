@@ -1,20 +1,18 @@
 
-import * as pm from "pareto-core-state"
-import * as pl from "pareto-core-lib"
+import * as ps from 'pareto-core-state'
+import * as pa from 'pareto-core-async'
 
 import * as mtest from "lib-pareto-test"
+import * as mapi from "../api"
+import * as mpub from "../../../../../pub"
 
-import * as api from "../api"
+export const $$: mapi.CgetTestSet = () => {
 
-import * as pub from "../../../../../pub"
-
-export const $$: api.CgetTestSet = () => {
-
-    const builder = pm.createUnsafeDictionaryBuilder<mtest.T.TestElement>()
+    const builder = ps.createUnsafeDictionaryBuilder<mtest.T.TestElement>()
     function createTest(name: string, expected: string, actual: string) {
         builder.add(name, {
-            type: ["test", {
-                type: ["short string", {
+            'type': ['test', {
+                type: ['short string', {
                     expected: expected,
                     actual: actual,
                 }]
@@ -23,30 +21,30 @@ export const $$: api.CgetTestSet = () => {
     }
     function createBooleanTest(name: string, test: boolean) {
         builder.add(name, {
-            type: ["test", {
-                type: ["boolean", test]
+            'type': ['test', {
+                type: ['boolean', test]
             }]
         })
     }
     function fail(name: string) {
         builder.add(name, {
-            type: ["test", {
-                type: ["boolean", false]
+            'type': ['test', {
+                type: ['boolean', false]
             }]
         })
     }
 
     function id(raw: string, formatted: string) {
-        createTest(raw, formatted, pub.$a.createIdentifier(raw))
+        createTest(raw, formatted, mpub.$a.createIdentifier(raw))
     }
     function qu(raw: string, formatted: string) {
-        createTest(raw, formatted, pub.$a.createQuotedString(raw))
+        createTest(raw, formatted, mpub.$a.createQuotedString(raw))
     }
     function ap(raw: string, formatted: string) {
-        createTest(raw, formatted, pub.$a.createApostrophedString(raw))
+        createTest(raw, formatted, mpub.$a.createApostrophedString(raw))
     }
     function bt(raw: string, formatted: string) {
-        createTest(raw, formatted, pub.$a.createBacktickedString(raw))
+        createTest(raw, formatted, mpub.$a.createBacktickedString(raw))
     }
     id("$", "$")
     id("", "_empty")
@@ -71,7 +69,7 @@ export const $$: api.CgetTestSet = () => {
     bt("foo3", "`foo3`")
     bt("foo3 ` bar", "`foo3 \\` bar`")
 
-    return pl.asyncValue({
+    return pa.asyncValue({
         elements: builder.getDictionary()
     })
 }

@@ -1,7 +1,6 @@
-import * as pi from 'pareto-core-internals'
-import * as api from "../api"
+import * as mapi from "../api"
 
-export const $$: api.CcreateApostrophedString = ($) => {
+export const $$: mapi.CcreateApostrophedString = ($) => {
     const jsonString = JSON.stringify($)
     return `'${jsonString.substring(1, jsonString.length - 1).replace(/'/g, "\\'")}'`
 }
