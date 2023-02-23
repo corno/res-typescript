@@ -1,5 +1,7 @@
-import * as mapi from "../api"
 
-export const $$: mapi.CcreateQuotedString = ($) => {
+
+import { CcreateQuotedString } from "../api"
+
+export const $$:CcreateQuotedString = ($) => {
     return JSON.stringify($)
 }
