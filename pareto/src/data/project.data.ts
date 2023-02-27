@@ -9,7 +9,7 @@ import { $ as api } from "./api.data"
 export const $: gproject.T.Project<pd.SourceLocation> = {
     'author': "Corno",
     'description': "provides functionality to support javascript code generation. helps create valid identifiers, quoted strings etcetera",
-    'license': "ISC",
+    'license': "TBD",
     
     'dependencies': d({
         "glo-pareto-common": {},
