@@ -1,6 +1,6 @@
 
 
-import { CcreateApostrophedString } from "../api"
+import { CcreateApostrophedString } from "../definition/api.generated"
 
 export const $$:CcreateApostrophedString = ($) => {
     const jsonString = JSON.stringify($)

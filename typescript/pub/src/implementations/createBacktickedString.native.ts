@@ -1,5 +1,5 @@
 import * as pi from 'pareto-core-internals'
-import { CcreateBacktickedString } from "../api"
+import { CcreateBacktickedString } from "../definition/api.generated"
 
 export const $$:CcreateBacktickedString = ($) => {
     const jsonString = JSON.stringify($)
