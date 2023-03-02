@@ -37,16 +37,16 @@ export const $$:CgetTestSet = () => {
     }
 
     function id(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$a.createIdentifier(raw))
+        createTest(raw, formatted, gpub.$r.createIdentifier(raw))
     }
     function qu(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$a.createQuotedString(raw))
+        createTest(raw, formatted, gpub.$r.createQuotedString(raw))
     }
     function ap(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$a.createApostrophedString(raw))
+        createTest(raw, formatted, gpub.$r.createApostrophedString(raw))
     }
     function bt(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$a.createBacktickedString(raw))
+        createTest(raw, formatted, gpub.$r.createBacktickedString(raw))
     }
     id("$", "$")
     id("", "_empty")
