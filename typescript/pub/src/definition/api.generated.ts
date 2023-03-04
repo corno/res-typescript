@@ -1,18 +1,18 @@
 import * as pt from 'pareto-core-types'
 
-import * as gthis from "./glossary"
+import * as g_this from "./glossary"
 
-export type CcreateApostrophedString = gthis.FCreateBacktickedString
+export type createApostrophedString = g_this.F.CreateBacktickedString
 
-export type CcreateBacktickedString = gthis.FCreateApostrophedString
+export type createBacktickedString = g_this.F.CreateApostrophedString
 
-export type CcreateIdentifier = gthis.FCreateIdentifier
+export type createIdentifier = g_this.F.CreateIdentifier
 
-export type CcreateQuotedString = gthis.FCreateQuotedString
+export type createQuotedString = g_this.F.CreateQuotedString
 
 export type API = {
-    createApostrophedString: CcreateApostrophedString
-    createBacktickedString: CcreateBacktickedString
-    createIdentifier: CcreateIdentifier
-    createQuotedString: CcreateQuotedString
+    createApostrophedString: createApostrophedString
+    createBacktickedString: createBacktickedString
+    createIdentifier: createIdentifier
+    createQuotedString: createQuotedString
 }

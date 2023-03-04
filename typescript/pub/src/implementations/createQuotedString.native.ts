@@ -1,7 +1,7 @@
 
 
-import { CcreateQuotedString } from "../definition/api.generated"
+import {createQuotedString } from "../definition/api.generated"
 
-export const $$:CcreateQuotedString = ($) => {
+export const $$: createQuotedString = ($) => {
     return JSON.stringify($)
 }

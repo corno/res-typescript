@@ -21,6 +21,8 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
     'parameters': d({}),
     'types': d({
     }),
+    'builders': d({
+    }),
     'interfaces': d({
     }),
     'functions': d({

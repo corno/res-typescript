@@ -1,8 +1,8 @@
 
 
-import { CcreateApostrophedString } from "../definition/api.generated"
+import {createApostrophedString } from "../definition/api.generated"
 
-export const $$:CcreateApostrophedString = ($) => {
+export const $$: createApostrophedString = ($) => {
     const jsonString = JSON.stringify($)
     return `'${jsonString.substring(1, jsonString.length - 1).replace(/'/g, "\\'")}'`
 }
