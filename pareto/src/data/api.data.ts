@@ -11,5 +11,5 @@ export const $: gapi.T.API<pd.SourceLocation> = {
         "createQuotedString": algorithm( functionReference("this", {}, "CreateQuotedString")),
         "createApostrophedString": algorithm( functionReference("this", {}, "CreateBacktickedString")),
         "createBacktickedString": algorithm(functionReference("this", {}, "CreateApostrophedString")),
-    })
+    }),
 }
