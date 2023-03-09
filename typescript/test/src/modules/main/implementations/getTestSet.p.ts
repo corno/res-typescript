@@ -6,7 +6,7 @@ import * as gtest from "lib-pareto-test"
 
 import * as gpub from "../../../../../pub"
 
-import {getTestSet } from "../api.generated"
+import { getTestSet } from "../api.generated"
 
 export const $$: getTestSet = () => {
 
@@ -61,7 +61,7 @@ export const $$: getTestSet = () => {
     id("a_b", "a_$b")
     id("a:b", "a_clb")
     id(":b", "_clb")
-    
+
     qu("foo", '"foo"')
     qu("foo \" bar", '"foo \\" bar"')
 

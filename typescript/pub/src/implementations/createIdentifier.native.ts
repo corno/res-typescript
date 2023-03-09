@@ -2,7 +2,7 @@ import * as pi from 'pareto-core-internals'
 
 
 
-import {createIdentifier } from "../api.generated"
+import { createIdentifier } from "../api.generated"
 
 export const $$: createIdentifier = ($) => {
     if ($ === "") {

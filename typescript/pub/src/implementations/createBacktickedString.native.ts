@@ -1,5 +1,5 @@
 import * as pi from 'pareto-core-internals'
-import {createBacktickedString } from "../api.generated"
+import { createBacktickedString } from "../api.generated"
 
 export const $$: createBacktickedString = ($) => {
     const jsonString = JSON.stringify($)

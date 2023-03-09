@@ -1,6 +1,6 @@
 
 
-import {createApostrophedString } from "../api.generated"
+import { createApostrophedString } from "../api.generated"
 
 export const $$: createApostrophedString = ($) => {
     const jsonString = JSON.stringify($)
