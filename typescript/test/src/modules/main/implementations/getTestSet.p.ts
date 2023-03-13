@@ -2,15 +2,15 @@
 import * as ps from 'pareto-core-state'
 import * as pa from 'pareto-core-async'
 
-import * as gtest from "lib-pareto-test"
+import * as g_test from "lib-pareto-test"
 
-import * as gpub from "../../../../../pub"
+import * as g_pub from "../../../../../pub"
 
 import { getTestSet } from "../api.generated"
 
 export const $$: getTestSet = () => {
 
-    const builder = ps.createUnsafeDictionaryBuilder<gtest.T.TestElement>()
+    const builder = ps.createUnsafeDictionaryBuilder<g_test.T.TestElement>()
     function createTest(name: string, expected: string, actual: string) {
         builder.add(name, {
             'type': ['test', {
@@ -37,16 +37,16 @@ export const $$: getTestSet = () => {
     }
 
     function id(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$r.createIdentifier(raw))
+        createTest(raw, formatted, g_pub.$r.createIdentifier(raw))
     }
     function qu(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$r.createQuotedString(raw))
+        createTest(raw, formatted, g_pub.$r.createQuotedString(raw))
     }
     function ap(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$r.createApostrophedString(raw))
+        createTest(raw, formatted, g_pub.$r.createApostrophedString(raw))
     }
     function bt(raw: string, formatted: string) {
-        createTest(raw, formatted, gpub.$r.createBacktickedString(raw))
+        createTest(raw, formatted, g_pub.$r.createBacktickedString(raw))
     }
     id("$", "$")
     id("", "_empty")

@@ -7,28 +7,29 @@ import {
     dictionary, member, taggedUnion, types, group,
     array,
     typeReference,
-    data,
-    func,
+    sdata,
+    sfunc,
     type,
     optional,
     number,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
-import * as gglossary from "lib-pareto-typescript-project/dist/submodules/glossary"
+import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
 const d = pd.d
 
-export const $: gglossary.T.Glossary<pd.SourceLocation> = {
+export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'parameters': d({}),
     'types': d({
     }),
-    'builders': d({
-    }),
-    'interfaces': d({
-    }),
-    'functions': d({
-        "CreateIdentifier": func(typeReference("common", "String"), null, null, data( typeReference("common", "String"), false)),
-        "CreateQuotedString": func(typeReference("common", "String"), null, null, data(  typeReference("common", "String"), false)),
-        "CreateApostrophedString": func(typeReference("common", "String"),  null, null, data( typeReference("common", "String"), false)),
-        "CreateBacktickedString": func(typeReference("common", "String"),  null, null, data( typeReference("common", "String"), false)),
-    }),
+    'type': ['synchronous', {
+        'builders': d({
+        }),
+        'functions': d({
+            "CreateIdentifier": sfunc(typeReference("common", "String"), null, null, sdata(typeReference("common", "String"))),
+            "CreateQuotedString": sfunc(typeReference("common", "String"), null, null, sdata(typeReference("common", "String"))),
+            "CreateApostrophedString": sfunc(typeReference("common", "String"), null, null, sdata(typeReference("common", "String"))),
+            "CreateBacktickedString": sfunc(typeReference("common", "String"), null, null, sdata(typeReference("common", "String"))),
+        }),
+
+    }],
 }
