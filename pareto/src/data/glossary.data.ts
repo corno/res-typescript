@@ -30,10 +30,10 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         'builders': d({
         }),
         'functions': d({
-            "CreateIdentifier": sfunc(externalTypeReference("common", "String"), null, null, sdata(externalTypeReference("common", "String"))),
-            "CreateQuotedString": sfunc(externalTypeReference("common", "String"), null, null, sdata(externalTypeReference("common", "String"))),
-            "CreateApostrophedString": sfunc(externalTypeReference("common", "String"), null, null, sdata(externalTypeReference("common", "String"))),
-            "CreateBacktickedString": sfunc(externalTypeReference("common", "String"), null, null, sdata(externalTypeReference("common", "String"))),
+            "CreateIdentifier": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
+            "CreateQuotedString": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
+            "CreateApostrophedString": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
+            "CreateBacktickedString": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
         }),
 
     }],
