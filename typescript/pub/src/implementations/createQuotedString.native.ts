@@ -1,7 +1,7 @@
 
 
-import { createQuotedString } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: createQuotedString = ($) => {
+export const $$: A. createQuotedString = ($) => {
     return JSON.stringify($)
 }

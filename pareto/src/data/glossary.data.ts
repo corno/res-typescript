@@ -1,19 +1,10 @@
 import * as pd from 'pareto-core-data'
 
 import {
-    string,
-    null_,
-    nested,
-    dictionary, member, taggedUnion, types, group,
-    array,
-    typeReference,
-    sdata,
-    sfunc,
-    type,
-    optional,
-    number,
+    data,
     imp,
     externalTypeReference,
+    sfunction,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
@@ -26,15 +17,20 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     }),
     'types': d({
     }),
-    'type': ['synchronous', {
-        'builders': d({
-        }),
+    'asynchronous': {
+        'interfaces': d({}),
+        'constructors': d({}),
+        'functions': d({}),
+    },
+    'synchronous': {
+        'interfaces': d({}),
+        'constructors': d({}),
         'functions': d({
-            "CreateIdentifier": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
-            "CreateQuotedString": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
-            "CreateApostrophedString": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
-            "CreateBacktickedString": sfunc(sdata(externalTypeReference("common", "String")), sdata(externalTypeReference("common", "String"))),
+            "CreateIdentifier": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
+            "CreateQuotedString": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
+            "CreateApostrophedString": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
+            "CreateBacktickedString": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
         }),
+    },
 
-    }],
 }

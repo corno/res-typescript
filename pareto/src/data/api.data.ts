@@ -1,15 +1,15 @@
 import * as pd from 'pareto-core-data'
 
-import { functionReference, constructor, algorithm, typeReference } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
+import { algorithm, sfunction } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
 
 import * as g_project from "lib-pareto-typescript-project/dist/submodules/project"
 const d = pd.d
 
-export const $: g_project.T.Module.api.root<pd.SourceLocation> = {
+export const $: g_project.T.ModuleDefinition.api.root<pd.SourceLocation> = {
     'algorithms': d({
-        "createIdentifier":algorithm( functionReference("this", {}, "CreateIdentifier")),
-        "createQuotedString": algorithm( functionReference("this", {}, "CreateQuotedString")),
-        "createApostrophedString": algorithm( functionReference("this", {}, "CreateBacktickedString")),
-        "createBacktickedString": algorithm(functionReference("this", {}, "CreateApostrophedString")),
+        "createIdentifier": algorithm(sfunction("this", {}, "CreateIdentifier")),
+        "createQuotedString": algorithm(sfunction("this", {}, "CreateQuotedString")),
+        "createApostrophedString": algorithm(sfunction("this", {}, "CreateBacktickedString")),
+        "createBacktickedString": algorithm(sfunction("this", {}, "CreateApostrophedString")),
     }),
 }

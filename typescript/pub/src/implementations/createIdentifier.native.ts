@@ -2,9 +2,9 @@ import * as pi from 'pareto-core-internals'
 
 
 
-import { createIdentifier } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: createIdentifier = ($) => {
+export const $$: A. createIdentifier = ($) => {
     if ($ === "") {
         return "_empty"
     }

@@ -1,8 +1,8 @@
 
 
-import { createApostrophedString } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: createApostrophedString = ($) => {
+export const $$: A. createApostrophedString = ($) => {
     const jsonString = JSON.stringify($)
     return `'${jsonString.substring(1, jsonString.length - 1).replace(/'/g, "\\'")}'`
 }
