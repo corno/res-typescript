@@ -19,17 +19,16 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     }),
     'asynchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({}),
+        'algorithms': d({}),
+        
     },
     'synchronous': {
         'interfaces': d({}),
-        'constructors': d({}),
-        'functions': d({
-            "CreateIdentifier": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
-            "CreateQuotedString": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
-            "CreateApostrophedString": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
-            "CreateBacktickedString": sfunction(data(externalTypeReference("common", "String")), externalTypeReference("common", "String")),
+        'algorithms': d({
+            "CreateIdentifier": sfunction(externalTypeReference("common", "String"), data(externalTypeReference("common", "String"))),
+            "CreateQuotedString": sfunction(externalTypeReference("common", "String"), data(externalTypeReference("common", "String"))),
+            "CreateApostrophedString": sfunction(externalTypeReference("common", "String"), data(externalTypeReference("common", "String"))),
+            "CreateBacktickedString": sfunction(externalTypeReference("common", "String"), data(externalTypeReference("common", "String"))),
         }),
     },
 
