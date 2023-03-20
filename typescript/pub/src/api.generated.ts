@@ -14,8 +14,8 @@ export namespace A {
 }
 
 export type API = {
-    createApostrophedString: A.createApostrophedString
-    createBacktickedString: A.createBacktickedString
-    createIdentifier: A.createIdentifier
-    createQuotedString: A.createQuotedString
+    readonly 'createApostrophedString': A.createApostrophedString
+    readonly 'createBacktickedString': A.createBacktickedString
+    readonly 'createIdentifier': A.createIdentifier
+    readonly 'createQuotedString': A.createQuotedString
 }
