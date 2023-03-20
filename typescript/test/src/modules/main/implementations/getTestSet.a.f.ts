@@ -37,16 +37,16 @@ export const $$: getTestSet = () => {
     }
 
     function id(raw: string, formatted: string) {
-        createTest(raw, formatted, g_pub.$r.createIdentifier(raw))
+        createTest(raw, formatted, g_pub.$r.createIdentifier()(raw))
     }
     function qu(raw: string, formatted: string) {
-        createTest(raw, formatted, g_pub.$r.createQuotedString(raw))
+        createTest(raw, formatted, g_pub.$r.createQuotedString()(raw))
     }
     function ap(raw: string, formatted: string) {
-        createTest(raw, formatted, g_pub.$r.createApostrophedString(raw))
+        createTest(raw, formatted, g_pub.$r.createApostrophedString()(raw))
     }
     function bt(raw: string, formatted: string) {
-        createTest(raw, formatted, g_pub.$r.createBacktickedString(raw))
+        createTest(raw, formatted, g_pub.$r.createBacktickedString()(raw))
     }
     id("$", "$")
     id("", "_empty")

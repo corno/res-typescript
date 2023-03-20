@@ -2,6 +2,8 @@
 
 import { A } from "../api.generated"
 
-export const $$: A. createQuotedString = ($) => {
-    return JSON.stringify($)
+export const $$: A.createQuotedString = () => {
+    return ($) => {
+        return JSON.stringify($)
+    }
 }
