@@ -15,12 +15,15 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'imports': d({
         "common": imp({}),
     }),
-    'types': d({
-    }),
+    'root': {
+        'namespaces': d({}),
+        'types': d({
+        }),
+    },
     'asynchronous': {
         'interfaces': d({}),
         'algorithms': d({}),
-        
+
     },
     'synchronous': {
         'interfaces': d({}),
