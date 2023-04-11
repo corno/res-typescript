@@ -4,7 +4,7 @@ import { $$ as icreateBacktickedString } from "./implementations/createBackticke
 import { $$ as icreateIdentifier } from "./implementations/createIdentifier.native"
 import { $$ as icreateQuotedString } from "./implementations/createQuotedString.native"
 
-export const $r: API = {
+export const $api: API = {
     'createApostrophedString': icreateApostrophedString,
     'createBacktickedString': icreateBacktickedString,
     'createIdentifier': icreateIdentifier,
