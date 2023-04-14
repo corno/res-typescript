@@ -76,6 +76,7 @@ export const $$: A.createIdentifier = () => {
             //???
             "unknown",
             "object",
+            "never",
         ]
         if (reservedKeywords.indexOf($) > -1) {
             return `_l${$}`
