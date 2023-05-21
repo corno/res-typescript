@@ -34,5 +34,10 @@ export namespace SYNC {
         export namespace F {
             export type CreateQuotedString = ($: g_common.T.String) => g_common.T.String
         }
+        
+        
+        export namespace F {
+            export type Escape = ($: T.EscapeParameters) => g_common.T.String
+        }
     }
 }

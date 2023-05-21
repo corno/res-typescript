@@ -7,6 +7,7 @@ export namespace D {
     
     
     
+    
 }
 
 export namespace A {
@@ -18,6 +19,8 @@ export namespace A {
     export type createIdentifier = () => g_this.SYNC.A.F.CreateIdentifier
     
     export type createQuotedString = () => g_this.SYNC.A.F.CreateQuotedString
+    
+    export type escape = () => g_this.SYNC.A.F.Escape
 }
 
 export type API = {
@@ -25,4 +28,5 @@ export type API = {
     readonly 'createBacktickedString': A.createBacktickedString
     readonly 'createIdentifier': A.createIdentifier
     readonly 'createQuotedString': A.createQuotedString
+    readonly 'escape': A.escape
 }
