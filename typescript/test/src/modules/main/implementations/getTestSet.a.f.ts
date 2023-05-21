@@ -1,6 +1,8 @@
 
 import * as ps from 'pareto-core-state'
 import * as pa from 'pareto-core-async'
+import * as pd from 'pareto-core-data'
+import * as pv from 'pareto-core-dev'
 
 import * as g_test from "lib-pareto-test"
 
@@ -9,6 +11,12 @@ import * as g_pub from "../../../../../pub"
 import { A } from "../api.generated"
 
 export const $$: A.getTestSet = () => {
+
+    pv.logDebugMessage(g_pub.$r.escape()({
+        'escape': "$",
+        'patterns to escape': pd.a(["_"]),
+        'string': "_fubar"
+    }))
 
     const builder = ps.createUnsafeDictionaryBuilder<g_test.T.TestElement>()
     function createTest(name: string, expected: string, actual: string) {
