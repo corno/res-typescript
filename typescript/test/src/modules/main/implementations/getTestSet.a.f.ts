@@ -56,6 +56,7 @@ export const $$: A.getTestSet = () => {
     function bt(raw: string, formatted: string) {
         createTest(raw, formatted, g_pub.$r.createBacktickedString()(raw))
     }
+    id("arguments", "_larguments")
     id("$", "$")
     id("", "_empty")
     id("abc", "abc")
