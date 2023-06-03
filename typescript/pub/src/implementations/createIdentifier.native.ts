@@ -11,6 +11,7 @@ export const $$: A.createIdentifier = () => {
         }
         const reservedKeywords = [
             //Reserved Words
+            "arguments",
             "break",
             "case",
             "catch",
